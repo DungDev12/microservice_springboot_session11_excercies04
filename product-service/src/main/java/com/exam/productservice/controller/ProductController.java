@@ -28,4 +28,9 @@ public class ProductController {
     public Product updateProductById(@PathVariable Long id, @RequestBody Product request) {
         return productService.updateProductById(id, request);
     }
+
+    @PostMapping("/{id}/sell")
+    public Product sellProductById(@PathVariable Long id, @RequestBody Product request) {
+        return productService.sellProduct(id, request);
+    }
 }
